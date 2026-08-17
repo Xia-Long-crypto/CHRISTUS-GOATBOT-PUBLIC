@@ -1,7 +1,7 @@
 [
   {
     "domain": ".facebook.com",
-    "expirationDate": 1821513033.510861,
+    "expirationDate": 1821544962.453135,
     "hostOnly": false,
     "httpOnly": true,
     "name": "datr",
@@ -79,7 +79,7 @@
   },
   {
     "domain": ".facebook.com",
-    "expirationDate": 1821513029.361315,
+    "expirationDate": 1821544958.514897,
     "hostOnly": false,
     "httpOnly": true,
     "name": "pas",
@@ -92,7 +92,7 @@
   },
   {
     "domain": ".facebook.com",
-    "expirationDate": 1792137032,
+    "expirationDate": 1792163525,
     "hostOnly": false,
     "httpOnly": false,
     "name": "vpd",
@@ -131,33 +131,7 @@
   },
   {
     "domain": ".facebook.com",
-    "expirationDate": 1794729029.36063,
-    "hostOnly": false,
-    "httpOnly": true,
-    "name": "fr",
-    "path": "/",
-    "sameSite": "no_restriction",
-    "secure": true,
-    "session": false,
-    "storeId": "0",
-    "value": "0nfoOWhX5MEwmJL54.AWePwua20NkoO9VqbrtJHLWQKJi0XulO-a2k3BsqXmamXx3piqY.BqgLpQ..AAA.0.0.Bqgr1G.AWfSamzRO3RZCdTxSODGdEUhHKg"
-  },
-  {
-    "domain": ".facebook.com",
-    "expirationDate": 1818489032,
-    "hostOnly": false,
-    "httpOnly": false,
-    "name": "fbl_st",
-    "path": "/",
-    "sameSite": "strict",
-    "secure": true,
-    "session": false,
-    "storeId": "0",
-    "value": "101015630%3BT%3A29782550"
-  },
-  {
-    "domain": ".facebook.com",
-    "expirationDate": 1794729031,
+    "expirationDate": 1794755524,
     "hostOnly": false,
     "httpOnly": false,
     "name": "wl_cbv",
@@ -166,6 +140,19 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "v2%3Bclient_version%3A3251%3Btimestamp%3A1786953030"
+    "value": "v2%3Bclient_version%3A3251%3Btimestamp%3A1786979522"
+  },
+  {
+    "domain": ".facebook.com",
+    "expirationDate": 1818515525,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "fbl_st",
+    "path": "/",
+    "sameSite": "strict",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "101221451%3BT%3A29782992"
   }
 ]
