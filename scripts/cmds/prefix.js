@@ -27,7 +27,7 @@ module.exports = {
           "   ↪ Refresh prefix cache for this chat\n" +
           "╰‣ Just type: prefix\n" +
           "   ↪ Shows current prefix info\n" +
-          "🤖 I'm Christus🫴, ready to help!"
+          "🤖 I'm ➤『𝗝𝗢𝗥𝗗𝗔𝗡 𝗕𝗢𝗧 』☜ヅ, ready to help!"
     }
   },
 
@@ -41,7 +41,7 @@ module.exports = {
         body: `👋 Hey ${userName}, did you ask for my prefix?\n` +
           `╭‣ 🌐 Global: ${globalPrefix}\n` +
           `╰‣ 💬 This Chat: ${threadPrefix}\n` +
-          `🤖 I'm Christus🫴\n📂 try "${threadPrefix}help" to see all commands.`,
+          `🤖 I'm ➤『𝗝𝗢𝗥𝗗𝗔𝗡 𝗕𝗢𝗧 』☜ヅ\n📂 try "${threadPrefix}help" to see all commands.`,
         mentions: [{ id: event.senderID, tag: userName }]
       });
     }
@@ -52,7 +52,7 @@ module.exports = {
         body: `✅ Hey ${userName}, chat prefix has been reset!\n` +
           `╭‣ 🌐 Global: ${globalPrefix}\n` +
           `╰‣ 💬 This Chat: ${globalPrefix}\n` +
-          `🤖 I'm Christus🫴\n📂 try "${globalPrefix}help" to see all commands.`,
+          `🤖 I'm ➤『𝗝𝗢𝗥𝗗𝗔𝗡 𝗕𝗢𝗧 』☜ヅ\n📂 try "${globalPrefix}help" to see all commands.`,
         mentions: [{ id: event.senderID, tag: userName }]
       });
     }
@@ -68,7 +68,7 @@ module.exports = {
           body: `🔄 Hey ${userName}, prefix cache has been refreshed!\n` +
             `╭‣ 🌐 Global: ${globalPrefix}\n` +
             `╰‣ 💬 This Chat: ${refreshedPrefix}\n` +
-            `🤖 I'm Christus🫴\n📂 try "${refreshedPrefix}help" to see all commands.`,
+            `🤖 I'm ➤『𝗝𝗢𝗥𝗗𝗔𝗡 𝗕𝗢𝗧 』☜ヅ\n📂 try "${refreshedPrefix}help" to see all commands.`,
           mentions: [{ id: event.senderID, tag: userName }]
         });
       } catch (error) {
@@ -149,8 +149,9 @@ module.exports = {
       body: `👋 Hey ${userName}, did you ask for my prefix?\n` +
         `╭‣ 🌐 Global: ${globalPrefix}\n` +
         `╰‣ 💬 This Chat: ${threadPrefix}\n` +
-        `🤖 I'm Christus🫴\n📂 try "${threadPrefix}help" to see all commands.`,
+        `🤖 I'm ➤『𝗝𝗢𝗥𝗗𝗔𝗡 𝗕𝗢𝗧 』☜ヅ\n📂 try "${threadPrefix}help" to see all commands.`,
       mentions: [{ id: event.senderID, tag: userName }]
     });
   }
 };
+  
