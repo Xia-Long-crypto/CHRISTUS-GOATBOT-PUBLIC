@@ -16,13 +16,13 @@
     "enable": false,
     "ignoreCommand": []
   },
-  "creator": ["61591338058896","61591163807973"],
-  "developer": ["61591338058896","61591163807973"],
-  "adminBot": ["61591338058896","61591163807973"],
-  "premium": ["61591338058896","61591163807973"],
-  "vipuser": ["61591338058896","61591163807973"],
-  "premiumUsers": ["61591338058896","61591163807973"],
-  "devUsers": ["61591338058896","61591163807973"],
+  "creator": ["61592645646617"],
+  "developer": ["61592645646617"],
+  "adminBot": ["61592645646617"],
+  "premium": ["61592645646617"],
+  "vipuser": ["61592645646617"],
+  "premiumUsers": ["61592645646617"],
+  "devUsers": ["61592645646617"],
   "developerOnly": {
     "enable": false,
     "ignoreCommand": []
@@ -40,8 +40,8 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Itz Christus",
-  "prefix": "+",
+  "nickNameBot": "➤『𝗝𝗢𝗥𝗗𝗔𝗡 𝗕𝗢𝗧 』☜ヅ",
+  "prefix": "¥",
   "noPrefix": true,
   "database": {
     "type": "mongodb",
