@@ -18,7 +18,7 @@ module.exports.config = {
   cooldowns: 5
 };
 
-module.exports.run = async function ({ api, event, args }) {
+module.exports.onStart = async function ({ api, event, args }) {
   const question = args.join(" ");
   if (!question) return api.sendMessage("❓ Pose ta question après la commande.", event.threadID, event.messageID);
 
