@@ -19,14 +19,35 @@
 
 const { spawn } = require("child_process");
 const log = require("./logger/log.js");
+const http = require("http");
+const axios = require("axios");
 
+// ─── Serveur HTTP minimal pour que Render détecte le service comme actif ───
+const PORT = process.env.PORT || 3000;
+http.createServer((req, res) => {
+	res.writeHead(200, { "Content-Type": "text/plain" });
+	res.end("Jordan Bot is running ✅");
+}).listen(PORT, () => {
+	log.info(`Serveur HTTP démarré sur le port ${PORT}`);
+});
+
+// ─── Auto-ping toutes les 4 minutes pour éviter la mise en veille ───
+const SELF_URL = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+
+setInterval(() => {
+	axios.get(SELF_URL, { timeout: 10000 })
+		.then(() => log.info("✅ Self-ping OK"))
+		.catch((err) => log.info("❌ Self-ping échoué: " + err.message));
+}, 4 * 60 * 1000);
+
+// ─── Lancement du bot avec redémarrage automatique en cas de crash ───
 function startProject() {
 	const child = spawn("node", ["Goat.js"], {
 		cwd: __dirname,
 		stdio: "inherit",
 		shell: true
 	});
-	
+
 	child.on("close", (code) => {
         if (code !== 0) {
             log.info("Bot crashed (code " + code + "), restarting...");
@@ -35,4 +56,5 @@ function startProject() {
     });
 }
 
-startProject();
+startPro
+					 ject();
