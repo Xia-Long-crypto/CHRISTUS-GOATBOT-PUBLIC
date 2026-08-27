@@ -44,17 +44,12 @@ async function clearConversation(userId) {
 async function handleAIProcess({ api, event, userInput, message }) {
   if (['reset', 'clear'].includes(userInput.toLowerCase())) {
     const isCleared = await clearConversation(event.senderID);
-    if (isCleared) return message.reply("🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜
-━━━━━━━━━\n\n Mémoire réinitialisée avec succès.");
-    return message.reply("🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜
-━━━━━━━━━\n\n Échec de la réinitialisation.");
+    if (isCleared) return message.reply(`🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜\n━━━━━━━━━\n\n Mémoire réinitialisée avec succès.`);
+    return message.reply(`🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜\n━━━━━━━━━\n\n Échec de la réinitialisation.`);
   }
   const response = await getAIResponse(userInput, event.senderID);
-  if (!response) return message.reply("🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜
-━━━━━━━━━\n\n Une erreur est survenue lors de la réponse.");
-  const chicBox = `🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜
-━━━━━━━━━\n\n ${response.replace(/\n/g, '\n ')}\n\n🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜
-━━━━━━━━━`;
+  if (!response) return message.reply(`🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜\n━━━━━━━━━\n\n Une erreur est survenue lors de la réponse.`);
+  const chicBox = `🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜\n━━━━━━━━━\n\n ${response.replace(/\n/g, '\n ')}\n\n🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜\n━━━━━━━━━`;
   const sentMessage = await message.reply(chicBox);
   if (sentMessage && sentMessage.messageID && global.GoatBot?.onReply) {
     global.GoatBot.onReply.set(sentMessage.messageID, {
@@ -77,7 +72,7 @@ module.exports = {
     category: '🤖 IA',
     guide: { fr: 'ai <question> ou jordan <question>\nai reset - Réinitialiser la mémoire' }
   },
-  
+
   // Répond sans ! mais seulement si ça commence par ai ou jordan
   onChat: async function ({ api, event, message }) {
     const { body, senderID } = event;
@@ -85,25 +80,24 @@ module.exports = {
     if (senderID === api.getCurrentUserID()) return;
 
     const msg = body.toLowerCase().trim();
-    
+
     if (msg.startsWith('ai ') || msg.startsWith('jordan ') || msg === 'ai' || msg === 'jordan') {
       const userInput = body.replace(/^(ai|jordan)\s*/i, '').trim();
-      if (!userInput) return message.reply("🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜
-━━━━━━━━━\n\n Veuillez poser une question.");
+      if (!userInput) return message.reply(`🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜\n━━━━━━━━━\n\n Veuillez poser une question.`);
       return await handleAIProcess({ api, event, userInput, message });
     }
   },
 
   onStart: async function ({ api, event, args, message }) {
     const userInput = args.join(' ').trim();
-    if (!userInput) return message.reply("🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜
-━━━━━━━━━\n\n Veuillez poser une question.");
+    if (!userInput) return message.reply(`🤖 𝗝𝗼𝗿𝗱𝗮𝗻 𝗔𝗜\n━━━━━━━━━\n\n Veuillez poser une question.`);
     return await handleAIProcess({ api, event, userInput, message });
   },
 
   onReply: async function ({ api, event, Reply, message }) {
     const userInput = event.body?.trim();
     if (!userInput) return;
-    return await handleAIProcess({ api, event, userInput, message });
+    return await handleAIProcess({ api, event, userInput, message 
+        });
   }
 };
